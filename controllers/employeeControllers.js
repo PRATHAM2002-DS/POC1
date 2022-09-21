@@ -5,7 +5,7 @@ exports.addEmployee = async (req, res) => {
   const timestamp = new Date();
   console.log(timestamp);
 
-  text = `insert INTO employee(first_name, last_name, email, mobile_number, created_at, updated_at) VALUES (${first_name}, ${last_name}, ${email}, ${mobile_number},${timestamp},${timestamp})`;
+  text = `INSERT INTO employee(first_name, last_name, email, mobile_number, created_at, updated_at) VALUES ("${first_name}", "${last_name}", "${email}", "${mobile_number}","2011-03-13 02:53:50","2011-03-13 02:53:50")`;
 
   //   values = [first_name, last_name, email.toLowerCase(), mobile_number];
   try {
