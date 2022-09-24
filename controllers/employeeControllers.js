@@ -9,7 +9,7 @@ exports.addEmployee = async (req, res) => {
 
   //   values = [first_name, last_name, email.toLowerCase(), mobile_number];
   try {
-    const data = await connection.query(text);
+    const data = await (await connection).execute(text);
     // console.log(data);
     res.send({ msg: "database created" });
   } catch (err) {
