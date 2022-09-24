@@ -18,7 +18,7 @@ let app = express();
 
 // pool.getConnection();
 
-connection.connect();
+// connection.connect();
 //   .then(() => console.log("connected"))
 //   .catch((err) => console.error("connection error", err.stack));
 
