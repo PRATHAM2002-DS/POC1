@@ -1,4 +1,3 @@
-const { response } = require("express");
 const connection = require("../db/connect");
 const {
   create_user,
@@ -18,7 +17,7 @@ const processDialogFlowRequest = async (req, res) => {
   let parameters = req.queryResult.intent.displayName;
   let intentDisplayName = req.body.queryResult.intent.displayName;
 
-  response = {
+  const response = {
     fulfillmentText: "Text response",
     fulfillmentMessages: [
       {
