@@ -4,7 +4,7 @@ const cors = require("cors");
 // dotenv.config();
 const connection = require("./db/connect");
 
-const employeeRouter = require("./routes/employeeRoutes");
+const botRouter = require("./routes/botRoutes");
 
 const PORT = 8000;
 
@@ -26,7 +26,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/employee", employeeRouter);
+app.use("/user", botRouter);
 app.listen(PORT, () =>
   console.log(`Server is successfully running on PORT ${PORT}`)
 );
