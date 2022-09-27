@@ -35,8 +35,8 @@ botRouter.post("/wehbook", urlencodedParser, async (req, res) => {
     // const AiSensi =
     console.log("------------------------------");
     console.log("request from webhook");
-    console.log(req.body);
-    response = await processDialogFlowRequest(req, res);
+    const Aisensi = req.body;
+    response = await processDialogFlowRequest(Aisensi);
   } catch (error) {
     console.log("Hii there");
     res.status(404).send({
